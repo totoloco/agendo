@@ -95,6 +95,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'registration',
+    # MAIN APP:
+    'alumnos',
 )
 
 LOGIN_REDIRECT_URL = '/'
