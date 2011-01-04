@@ -1,0 +1,19 @@
+*Instalación*
+- Copiar settings.template.py como settings.py, editando las rutas de directorios y archivos, las que dicen USUARIO.
+- $ ./manage.py syncdb
+- $ ./manage.py runserver
+
+*Actualización*
+- Si hay parámetros nuevos o cambios relevantes en el settings.py, llevarlo al settings.template.py con algún formato genérico.
+- IDEM al revés, si en una actualización, se modifica el settings.template.py, adaptar el cambio a settings.py.
+
+*Actualización de la base de datos*
+- ./manage.py syncdb
+
+*Nomenclatura*
+- Archivos y bases de datos (por ahora), en inglés y separada con guiones bajos.
+- Url's (por ahora) en inglés.
+
+*Idioma*
+- Por ahora el predeterminado es castellano (es-AR).
+- Tiene soporte multiidioma con i18n.
