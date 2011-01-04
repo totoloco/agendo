@@ -1,0 +1,16 @@
+{% load i18n %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Alumnos - {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="/site_media/css/master.css" type="text/css" />
+  </head>
+  <body>
+    {% block content %}{% endblock content %}
+    {% block footer %}
+      <hr>
+      <p>{% trans "Gracias por visitar el sitio" %}.</p>
+    {% endblock footer %}
+  </body>
+</html>

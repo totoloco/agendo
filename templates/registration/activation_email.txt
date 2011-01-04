@@ -1,0 +1,9 @@
+Clave de registración:
+{{ activation_key }}
+
+Ingresá a:
+http://{{ site.domain }}{% url registration_activate activation_key %}
+
+Expira en {{ expiration_days }} días.
+
+Revisá tu carpeta de Spam / Junk / Basura / No deseados.

@@ -1,0 +1,21 @@
+body{
+  font-family:Helvetica,Arial,sans-serif;
+  background:#cfc;
+}
+
+label{
+  display:block;
+}
+
+input{
+  color:#000;
+  background:#fff;
+  border:solid 1px #000;
+  margin-left:40px;
+  width:200px;
+}
+
+.button{
+  width:auto;
+  font-weight:bold;
+}
