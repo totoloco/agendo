@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+from settings import *
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -17,5 +18,5 @@ urlpatterns = patterns('',
     (r'^accounts/', include('registration.urls')),
 
     # SOLO PARA DEBUG + DEVELOPMENT
-    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/matias/public_html/alumnos/alumnos/media'}),
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_ROOT}),
 )
