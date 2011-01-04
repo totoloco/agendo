@@ -9,8 +9,13 @@
   <body>
     {% block content %}{% endblock content %}
     {% block footer %}
-      <hr>
-      <p>{% trans "Gracias por visitar el sitio" %}.</p>
+    <div id="footer">
+      <p>
+        {% trans "Gracias por visitar el sitio" %}.
+        <a href="https://github.com/totoloco/agendo">{% trans "Agendo es libre" %}</a>.
+        {% trans "Agendo no es un servidor de archivos, para eso podrías probar con un servidor http, un servidor ftp, un servidor git, o uno mercurial" %}.
+      </p>
+    </div>
     {% endblock footer %}
   </body>
 </html>
