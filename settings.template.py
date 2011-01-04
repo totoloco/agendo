@@ -97,6 +97,8 @@ INSTALLED_APPS = (
     'registration',
 )
 
+LOGIN_REDIRECT_URL = '/'
+
 ACCOUNT_ACTIVATION_DAYS = 5
 
 STATIC_ROOT = '/home/USUARIO/builds/agendo/media'
