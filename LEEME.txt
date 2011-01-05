@@ -21,3 +21,7 @@
 
 *Aplicación*
 - La aplicación principal se llama: alumnos
+
+*Colaboradores*
+- Realizado por jumanji #archlinux-co en irc.freenode.net
+- Colaboran: himito, juanorejas, mctpyt, yipman, totoloco
