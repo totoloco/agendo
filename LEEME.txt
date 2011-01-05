@@ -14,6 +14,9 @@
 - Archivos y bases de datos (por ahora), en inglés y separada con guiones bajos.
 - Url's (por ahora) en inglés.
 
+*Estilo de codificación*
+- Usar la descrita en http://www.python.org/dev/peps/pep-0008/
+
 *Idioma*
 - Por ahora el predeterminado es castellano  (es-AR lunfardo) (por ahora).
 - Tiene soporte multiidioma con i18n.
