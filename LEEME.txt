@@ -1,30 +1,55 @@
-*Instalación*
-- Copiar settings.template.py como settings.py, editando las rutas de directorios y archivos, las que dicen USUARIO.
+=============================
+ Leeme si vas a tocar Agendo
+=============================
+
+
+Instalación
+===========
+
+- Copiar ``settings.template.py`` como ``settings.py``, editando las rutas de directorios y archivos, las que dicen USUARIO.
 - $ ./manage.py syncdb
 - $ ./manage.py runserver
 
-*Actualización*
-- Si hay parámetros nuevos o cambios relevantes en el settings.py, llevarlo al settings.template.py con algún formato genérico.
-- IDEM al revés, si en una actualización, se modifica el settings.template.py, adaptar el cambio a settings.py.
+Actualización
+=============
 
-*Actualización de la base de datos*
+- Si hay parámetros nuevos o cambios relevantes en el ``settings.py``, llevarlo al ``settings.template.py`` con algún formato genérico.
+- IDEM al revés, si en una actualización se modifica el ``settings.template.py``, adaptar el cambio a ``settings.py``.
+
+Actualización de la base de datos
+=================================
+
 - ./manage.py syncdb
 
-*Nomenclatura*
-- Archivos y bases de datos (por ahora), en inglés y separada con guiones bajos.
-- Url's (por ahora) en inglés.
+Nomenclatura
+============
 
+<<<<<<< HEAD
 *Estilo de codificación*
 - Usar la descrita en http://www.python.org/dev/peps/pep-0008/
 
 *Idioma*
 - Por ahora el predeterminado es castellano  (es-AR lunfardo) (por ahora).
 - Tiene soporte multiidioma con i18n.
+=======
+- Archivos y bases de datos (por ahora) en inglés. Palabras separadas por guiones bajos.
+- Direcciones URL (por ahora) en inglés.
+
+Idioma
+======
+
+- Por ahora el predeterminado es castellano (es-AR, lunfardo) (por ahora).
+- Tiene capacidad multiidioma con i18n.
+>>>>>>> de6d9b917a860f0619c7b297cd5871dbffa4ed4c
 - Los mensajes de commits/envíos en castellano.
 
-*Aplicación*
-- La aplicación principal se llama: alumnos
+Aplicación
+==========
 
-*Colaboradores*
-- Realizado por jumanji #archlinux-co en irc.freenode.net
-- Colaboran: himito, juanorejas, mctpyt, yipman, totoloco
+La aplicación principal se llama: alumnos.
+
+Colaboradores
+=============
+
+- Realizado por jumanji #archlinux-co en irc.freenode.net.
+- Colaboran: himito, juanorejas, mctpyt, yipman, totoloco.
