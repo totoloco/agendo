@@ -7,3 +7,6 @@ class Subject(models.Model):
   teacher_emails = models.CharField(max_length=255)
   url = models.CharField(max_length=255)
   # opcionales para agregar: is_active, created, updated, user_id (el usuario que creO la materia)
+
+  def __unicode__(self):
+    return self.name

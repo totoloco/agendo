@@ -17,8 +17,8 @@ urlpatterns = patterns('',
 
     (r'^accounts/', include('registration.urls')),
 
-    #(r'^accounts/profile$', include('registration.urls')),
-
     # SOLO PARA DEBUG + DEVELOPMENT
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_ROOT}),
+
+    (r'^$', 'alumnos.views.index'),
 )
