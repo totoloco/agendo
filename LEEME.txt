@@ -15,7 +15,7 @@
 - Url's (por ahora) en inglés.
 
 *Idioma*
-- Por ahora el predeterminado es castellano  (es-AR) (por ahora).
+- Por ahora el predeterminado es castellano  (es-AR lunfardo) (por ahora).
 - Tiene soporte multiidioma con i18n.
 - Los mensajes de commits/envíos en castellano.
 
