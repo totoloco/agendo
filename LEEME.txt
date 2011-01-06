@@ -6,40 +6,64 @@
 Instalación
 ===========
 
-- Copiar ``settings.template.py`` como ``settings.py``, editando las rutas de directorios y archivos, las que dicen USUARIO.
+- Copiar ``settings.template.py`` como ``settings.py``, editando las rutas de
+  directorios y archivos, las que dicen USUARIO.
 - $ ./manage.py syncdb
 - $ ./manage.py runserver
 
 Actualización
 =============
 
-- Si hay parámetros nuevos o cambios relevantes en el ``settings.py``, llevarlo al ``settings.template.py`` con algún formato genérico.
-- IDEM al revés, si en una actualización se modifica el ``settings.template.py``, adaptar el cambio a ``settings.py``.
+- Si hay parámetros nuevos o cambios relevantes en el ``settings.py``, llevarlo
+  al ``settings.template.py`` con algún formato genérico.
+- IDEM al revés, si en una actualización se modifica el
+  ``settings.template.py``, adaptar el cambio a ``settings.py``.
 
 Actualización de la base de datos
 =================================
 
 - ./manage.py syncdb
 
-Nomenclatura
-============
-
-*Estilo de codificación*
-- Usar la descrita en http://www.python.org/dev/peps/pep-0008/
-
-*Idioma*
-- Por ahora el predeterminado es castellano  (es-AR lunfardo) (por ahora).
-- Tiene soporte multiidioma con i18n.
-=======
-- Archivos y bases de datos (por ahora) en inglés. Palabras separadas por guiones bajos.
-- Direcciones URL (por ahora) en inglés.
-
 Idioma
 ======
 
-- Por ahora el predeterminado es castellano (es-AR, lunfardo) (por ahora).
-- Tiene capacidad multiidioma con i18n.
-- Los mensajes de commits/envíos en castellano.
+El idioma principal del proyecto es el castellano (es_AR, lunfardo), por ahora.
+
+En el proyecto se pueden encontrar dos tipos de textos:
+    1. Aquellos que por practicidad están disponibles en un solo idioma. Se
+       incluyen:
+           - nombres de archivos y directorios;
+           - identificadores propios (de tablas, vistas, campos, etc.) en la
+             base de datos;
+           - identificadores propios en el código en Python;
+           - comentarios en el código en Python;
+           - mensajes de envíos/commits al repositorio.
+    2. Aquellos que por defecto están en un idioma dado pero se les puede
+       agregar traducciones. Se incluyen:
+           - cadenas de la interfaz de usuario;
+           - archivos de documentación;
+           - ¿direcciones URL?
+
+Para ambos se va a usar el idioma principal -castellano-. Los del segundo tipo,
+además, van a contar con traducciones a otros idiomas.
+
+Allá donde por limitaciones técnicas no podamos usar el castellano en todo su
+esplendor, vamos a buscar la aproximación más oportuna.  Por ejemplo, en los
+identificadores de Python sólo podemos usar caracteres alfanuméricos ASCII y el
+guion bajo, así que vamos a prescindir de las tilder y reemplazar la “ñ” por
+“ni” o “nn” (este último dígrafo sería más fiel históricamente).
+
+Estilo de codificación
+======================
+
+Nuestro estilo para el código en Python se basa en la **Guía de Estilo para
+Código Python**, recogida en el PEP8:
+    http://www.python.org/dev/peps/pep-0008/
+
+Con algunas salvedades:
+    - como ya se explicó, los identificadores van a estar en castellano;
+    - los comentarios no van a limitarse a ASCII, ya que se tienen que poder
+      escribir en auténtico castellano.
 
 Aplicación
 ==========
@@ -49,10 +73,11 @@ La aplicación principal se llama: alumnos.
 Filosofía
 =========
 
-- La idea es que sea simple y sin repetirnos (KISS & DRY). Todo bajo un sistema meritocrático.
+La idea es que sea simple y sin repetirnos (KISS & DRY). Todo bajo un sistema
+meritocrático.
 
 Colaboradores
 =============
 
-- Realizado por jumanji #archlinux-co en irc.freenode.net.
+- Realizado por la comunidad de Jumanji (#archlinux-co en irc.freenode.net).
 - Colaboran: himito, juanorejas, mctpyt, yipman, totoloco.
