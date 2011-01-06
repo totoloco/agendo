@@ -24,7 +24,6 @@ Actualización de la base de datos
 Nomenclatura
 ============
 
-<<<<<<< HEAD
 *Estilo de codificación*
 - Usar la descrita en http://www.python.org/dev/peps/pep-0008/
 
@@ -40,7 +39,6 @@ Idioma
 
 - Por ahora el predeterminado es castellano (es-AR, lunfardo) (por ahora).
 - Tiene capacidad multiidioma con i18n.
->>>>>>> de6d9b917a860f0619c7b297cd5871dbffa4ed4c
 - Los mensajes de commits/envíos en castellano.
 
 Aplicación
