@@ -1,4 +1,4 @@
-from alumnos.models import Subject
+from alumnos.models import Materia
 from django.contrib import admin
 
-admin.site.register(Subject)
+admin.site.register(Materia)

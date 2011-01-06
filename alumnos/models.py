@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 from django.db import models
+from django.contrib.auth.models import User
 
-# subject == materia
-class Subject(models.Model):
-    name = models.CharField(max_length=255)
-    teachers = models.CharField(max_length=255)
-    teacher_emails = models.CharField(max_length=255)
+class Materia(models.Model):
+    nombre = models.CharField(max_length=255)
+    profesores = models.CharField(max_length=255)
+    emails_de_profesores = models.CharField(max_length=255)
     url = models.CharField(max_length=255)
+    usuario = models.ForeignKey(User, unique=True)
     # opcionales para agregar: is_active, created, updated, user_id (el usuario que creó la materia)
 
     def __unicode__(self):
-        return self.name
+        return self.nombre

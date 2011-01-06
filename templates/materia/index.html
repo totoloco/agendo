@@ -3,10 +3,10 @@
 {% block title %}{% trans 'Materias' %}{% endblock title %}
 
 {% block content %}
-  {% if subject_list %}
+  {% if materia_list %}
     <ul>
-    {% for subject in subject_list %}
-      <li><a href="/subject/{{ subject.id }}/">{{ subject }}</a></li>
+    {% for materia in materia_list %}
+      <li><a href="/subject/{{ materia.id }}/">{{ materia }}</a></li>
     {% endfor %}
     </ul>
   {% else %}
