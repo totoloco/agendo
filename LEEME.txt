@@ -3,6 +3,13 @@
 =============================
 
 
+Dependencias
+============
+
+Agendo se está desarrollando con la siguiente plataforma como base:
+  - Python 2.7;
+  - Django 1.2.
+
 Instalación
 ===========
 
