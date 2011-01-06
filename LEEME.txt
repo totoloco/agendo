@@ -46,6 +46,11 @@ Aplicación
 
 La aplicación principal se llama: alumnos.
 
+Filosofía
+=========
+
+- La idea es que sea simple y sin repetirnos (KISS & DRY). Todo bajo un sistema meritocrático.
+
 Colaboradores
 =============
 
