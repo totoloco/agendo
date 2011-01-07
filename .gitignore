@@ -1,5 +1,7 @@
 *.pyc
 *.sqlite
 *.swp
+*.bak
+*.bkp
 /settings.py
 /.gitconfig
