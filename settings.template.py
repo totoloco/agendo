@@ -1,70 +1,84 @@
-# Django settings for agendo project.
+# -*- coding: utf-8 -*-
+'''Configuración de Django para el proyecto Agendo.'''
+
+# INSTRUCCIONES:
+# Renombrá este archivo a “settings.py” y reemplazá todas las ocurriencias de
+# “USUARIO” en las rutas por tu nombre de usuario del sistema operativo.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    # ('Tu Nombre', 'tu_correo@dominio.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/USUARIO/builds/agendo/agendo.sqlite', # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        # Motor de base de datos a usar. Podés cambiar ``sqlite3`` por
+        # ``postgresql_psycopg2``, ``postgresql``, ``mysql`` u ``oracle``.
+        'ENGINE': 'django.db.backends.sqlite3',
+        # Nombre de la base de datos o ruta al archivo de base de datos si
+        # usás sqlite3.
+        'NAME': '/home/USUARIO/builds/agendo/agendo.sqlite',
+        # Usuario de la base de datos. No se usa con sqlite3.
+        'USER': '',
+        # Contraseña de la base de datos. No se usa con sqlite3.
+        'PASSWORD': '',
+        # Dirección del servidor donde está alojada la base de datos. No se
+        # usa con sqlite3.
+        'HOST': '',
+        # Puerto de dicho servidor. No se usa con sqlite3.
+        'PORT': '',
     }
 }
 
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
+# Zona horaria local para esta instalación. Las posibles opciones se pueden
+# encontrar acá: http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
+# aunque no todas pueden estar disponibles en todos los sistemas operativos.
+# En sistemas Unix, un valor None hace que Django use el mismo huso horario
+# que el sistema operativo.
+# Si estás bajo un entorno Windows, tenés que hacer coincidir este parámetro
+# con el huso horario de tu sistema.
 TIME_ZONE = 'America/Argentina/Ushuaia'
 
-# Language code for this installation. All choices can be found here:
-# http://www.i18nguy.com/unicode/language-identifiers.html
+# Código de idioma para esta instalación. Las opciones posibles se pueden
+# encontrar acá: http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'es-AR'
 
 SITE_ID = 1
 
-# If you set this to False, Django will make some optimizations so as not
-# to load the internationalization machinery.
+# Si lo establecés como False, Django va a hacer algunas optimizaciones para
+# no cargar la maquinaria de internacionalización.
 USE_I18N = True
 
-# If you set this to False, Django will not format dates, numbers and
-# calendars according to the current locale
+# Si lo establecés como False, Django no va a formatear las fechas, números y
+# calendarios de acuerdo con la “locale” actual.
 USE_L10N = True
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/"
+# Ruta absoluta del sistema de archivos al directorio que tendrá los archivos
+# que suban los usuarios. Ejemplo: “/home/media/media.lawrence.com/”.
 MEDIA_ROOT = ''
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
+# Dirección URL que maneja los medios servidos desde MEDIA_ROOT. Asegurate de
+# agregar una barra al final si hay un componente de ruta (opcional en otros
+# casos). Ejemplos: “http://media.lawrence.com”, “http://ejemplo.com/media/”.
 MEDIA_URL = ''
 
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
+# Prefijo de direcciones URL para medios de la administración (CSS, JavaScript
+# e imágenes). Asegurate de agregar una barra al final. Ejemplos:
+# “http://foo.com/media/”, “/media/”.
 ADMIN_MEDIA_PREFIX = '/media/'
 
-# Make this unique, and don't share it with anybody.
+# Hacela única y no la compartas con nadie.
 SECRET_KEY = '=$3k#h2)^o7*^j_37h58f+%ix%i*&+b7wyot+7$#x6l7e+e2v!'
 
-# List of callables that know how to import templates from various sources.
+# Lista de “callables” que saben cómo importar plantillas desde varias fuentes.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+#    'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -78,10 +92,11 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'agendo.urls'
 
 TEMPLATE_DIRS = (
-    '/home/USUARIO/builds/agendo/templates',
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    # Poné cadenas de texto acá, como “/home/html/django_plantillas” o
+    # “C:/www/django/plantillas”.
+    # Usá siempre barras sin invertir, incluso en Windows.
+    # No te olvides de usar rutas absolutas, no relativas.
+    '/home/USUARIO/builds/agendo/plantillas'
 )
 
 INSTALLED_APPS = (
@@ -90,12 +105,14 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    # Uncomment the next line to enable the admin:
+    # Descomentá la siguiente línea para activar la interfaz de 
+    # administración:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
-    'registration',
-    # MAIN APP:
+    # Descomentá la siguiente línea para activar la documentación de la
+    # interfaz de administración:
+    #'django.contrib.admindocs',
+    #'registration',
+    # APLICACIÓN PRINCIPAL:
     'alumnos',
 )
 
@@ -105,8 +122,8 @@ ACCOUNT_ACTIVATION_DAYS = 5
 
 STATIC_ROOT = '/home/USUARIO/builds/agendo/media'
 
-EMAIL_HOST = 'smtp.email.com'
-EMAIL_HOST_USER = 'email@email.com'
+EMAIL_HOST = 'smtp.correo.com'
+EMAIL_HOST_USER = 'correo@correo.com'
 EMAIL_HOST_PASSWORD = 'clave'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

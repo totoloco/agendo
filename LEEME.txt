@@ -8,31 +8,41 @@ Dependencias
 
 Agendo se está desarrollando con la siguiente plataforma como base:
   - Python 2.7;
-  - Django 1.2.
+  - Django 1.2 con la aplicación ``django_registration``.
+
+En Arch Linux, se pueden instalar estas dependencias con los siguientes
+comandos::
+    # pacman -S django
+    # easy-install-2.7 django_registration
 
 
 Instalación
 ===========
 
-- Copiar ``settings.template.py`` como ``settings.py``, editando las rutas de
-  directorios y archivos, las que dicen USUARIO.
-- $ ./manage.py syncdb
-- $ ./manage.py runserver
+1. Copiar ``settings.template.py`` como ``settings.py``, editando las rutas de
+   directorios y archivos, las que dicen USUARIO.
+
+2. Generar la base de datos::
+       $ ./manage.py syncdb
+
+3. Ejecutar el servidor web::
+       $ ./manage.py runserver
 
 
 Actualización
 =============
 
-- Si hay parámetros nuevos o cambios relevantes en el ``settings.py``, llevarlo
-  al ``settings.template.py`` con algún formato genérico.
+- Si hay parámetros nuevos o cambios relevantes en el ``settings.py``,
+  llevarlos al ``settings.template.py`` con algún formato genérico.
 - IDEM al revés, si en una actualización se modifica el
-  ``settings.template.py``, adaptar el cambio a ``settings.py``.
+  ``settings.template.py``, adaptar los cambios a ``settings.py``.
 
 
 Actualización de la base de datos
 =================================
 
-- ./manage.py syncdb
+Con el siguiente comando se actualiza la base de datos::
+    $ ./manage.py syncdb
 
 
 Idioma
@@ -66,8 +76,8 @@ guion bajo, así que vamos a prescindir de las tildes y reemplazar la “ñ” p
 etimológicamente).
 
 
-Estilo de codificación
-======================
+Estilo
+======
 
 Nuestro estilo para el código en Python se basa en la **Guía de Estilo para
 Código Python**, recogida en el PEP8:
@@ -78,11 +88,14 @@ Con algunas salvedades:
     - los comentarios no van a limitarse a ASCII, ya que se tienen que poder
       escribir en auténtico castellano.
 
+Para la documentación, usamos el formato de marcado **reStructuredText**:
+    http://docutils.sourceforge.net/rst.html
+
 
 Aplicación
 ==========
 
-La aplicación principal se llama: alumnos.
+La aplicación principal se llama **alumnos**.
 
 
 Filosofía

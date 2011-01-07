@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans 'Lista de materias' %}{% endblock title %}
+
+{% block contenido %}
+    <h1>{% trans 'Lista de materias' %}</h1>
+    {% if lista_materias %}
+        <ul>
+        {% for materia in lista_materias %}
+            <li><a href="/materia/{{ materia.id }}/">{{ materia }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>{% trans 'No hay materias.' %}</p>
+    {% endif %}
+{% endblock contenido %}
