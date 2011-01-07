@@ -12,6 +12,6 @@ urlpatterns = patterns('',
     # interfaz de administración:
     #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # SOLO PARA DEPURACIÓN Y DESARROLLO:
-    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_ROOT})
+    (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_ROOT}),
     (r'^', include('alumnos.urls')),
 )
