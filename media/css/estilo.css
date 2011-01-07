@@ -15,12 +15,12 @@ input{
   width:200px;
 }
 
-.button{
+.boton{
   width:auto;
   font-weight:bold;
 }
 
-#footer{
+#pie{
   border-top:solid 1px #333;
   text-align:center;
   font-size:11px;

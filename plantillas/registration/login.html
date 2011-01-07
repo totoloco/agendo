@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% block title %}{% trans "Ingresar" %}{% endblock title %}
+{% block titulo %}{% trans "Ingresar" %}{% endblock titulo %}
 
-{% block content %}
+{% block contenido %}
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
   
-    <input type="submit" class="button" />
+    <input type="submit" class="boton" />
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
   

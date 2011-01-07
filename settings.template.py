@@ -111,7 +111,8 @@ INSTALLED_APPS = (
     # Descomentá la siguiente línea para activar la documentación de la
     # interfaz de administración:
     #'django.contrib.admindocs',
-    #'registration',
+    # Apliación de registro de usuarios:
+    'registration',
     # APLICACIÓN PRINCIPAL:
     'alumnos',
 )
