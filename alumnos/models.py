@@ -9,7 +9,7 @@ class Materia(models.Model):
     profesores = models.CharField(max_length = 255)
     correos_de_profesores = models.CharField(max_length = 255)
     url = models.CharField(max_length = 255)
-    usuario = models.ForeignKey(User, unique = True)
+    usuario = models.ForeignKey(User)
     # Opcionales para agregar: is_active, created, updated,
     # user_id (el usuario que creó la materia).
     
