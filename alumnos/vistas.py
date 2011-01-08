@@ -2,6 +2,7 @@
 
 from alumnos.models import Materia
 from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 # La creación de materias por ahora sólo se realiza desde la interfaz
 # de administración.

@@ -1,21 +1,36 @@
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Agendo - {% block titulo %}{% endblock titulo %}</title>
-        <link rel="stylesheet" href="/site_media/css/estilo.css" type="text/css" />
-    </head>
-    <body>
-    {% block contenido %}{% endblock contenido %}
-    {% block pie %}
-        <div id="pie">
-            <p>
-                {% trans "Gracias por visitar el sitio" %}.
-                <a href="https://github.com/totoloco/agendo">{% trans "Agendo es libre" %}</a>.
-                {% trans "Agendo no es un servidor de archivos, para eso podrías probar con un servidor HTTP, un servidor FTP, un servidor git o uno Mercurial" %}.
-            </p>
-        </div>
-    {% endblock pie %}
-    </body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Agendo - {% block titulo %}{% endblock titulo %}</title>
+    <link rel="stylesheet" href="/site_media/css/estilo.css" type="text/css" />
+  </head>
+  <body>
+  {% block cabeza %}
+    <div id="cabeza">
+      <ul> 
+        <li><a href="/">{% trans "Inicio" %}</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url auth_login %}">{% trans "Ingresar" %}</a></li>
+        <li><a href="{% url registration_register %}">{% trans "Registrarse" %}</a></li>
+      {% else %}
+        <li><a href="{% url auth_logout %}">{% trans "Salir" %}</a></li>
+      {% endif %}
+      </ul> 
+      <div class="clear"></div>
+    </div>
+  {% endblock cabeza %}
+  {% block contenido %}{% endblock contenido %}
+  {% block pie %}
+    <div id="pie">
+      <hr />
+      <p>
+        {% trans "Gracias por visitar el sitio" %}.
+        <a href="https://github.com/totoloco/agendo">{% trans "Agendo es libre" %}</a>.
+        {% trans "Agendo no es un servidor de archivos, para eso podrías probar con un servidor HTTP, un servidor FTP, un servidor Git o uno Mercurial" %}.
+      </p>
+    </div>
+  {% endblock pie %}
+  </body>
 </html>

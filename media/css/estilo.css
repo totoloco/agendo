@@ -1,10 +1,15 @@
 body{
-  font-family:Helvetica,Arial,sans-serif;
   background:#cfc;
+  font-size:14px;
+  font-family:Helvetica,Arial,sans-serif;
 }
 
 label{
   display:block;
+}
+
+a:hover{
+  text-decoration:none;
 }
 
 input{
@@ -19,9 +24,33 @@ input{
   width:auto;
   font-weight:bold;
 }
+.clear{
+  clear:both;
+}
+
+#cabeza ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  clear:both;
+}
+
+#cabeza ul li{
+  list-style:none;
+  margin:2px;
+  padding:2px;
+  float:left;
+  font-weight:bold;
+}
 
 #pie{
-  border-top:solid 1px #333;
   text-align:center;
   font-size:11px;
+}
+
+#pie hr{
+  border:0;
+  background-color:#333;
+  width:90%;
+  height:1px;
 }

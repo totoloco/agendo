@@ -11,6 +11,5 @@
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
   
-  <p>{% trans "Olvidaste la contraseña" %}? <a href="{% url auth_password_reset %}">{% trans "Reiniciar contraseña" %}</a>!</p>
-  <p>{% trans "Registrarse" %}? <a href="{% url registration_register %}">{% trans "Registro" %}</a>!</p>
+  <p><a href="{% url auth_password_reset %}">{% trans "Reiniciar contraseña" %}</a></p>
 {% endblock %}
