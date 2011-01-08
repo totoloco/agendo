@@ -14,10 +14,10 @@
       <ul> 
         <li><a href="/">{% trans "Inicio" %}</a></li>
       {% if user.is_authenticated %}
+        <li><a href="{% url auth_logout %}">{% trans "Salir" %}</a></li>
+      {% else %}
         <li><a href="{% url auth_login %}">{% trans "Ingresar" %}</a></li>
         <li><a href="{% url registration_register %}">{% trans "Registrarse" %}</a></li>
-      {% else %}
-        <li><a href="{% url auth_logout %}">{% trans "Salir" %}</a></li>
       {% endif %}
       </ul> 
       <div class="clear"></div>
