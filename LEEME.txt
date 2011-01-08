@@ -10,8 +10,7 @@ Agendo se está desarrollando con la siguiente plataforma como base:
   - Python 2.7;
   - Django 1.2 con la aplicación ``django_registration``.
 
-En Arch Linux, se pueden instalar estas dependencias con los siguientes
-comandos::
+En Arch Linux, se pueden instalar estas dependencias con los siguientes comandos::
     # pacman -S django
     # easy-install-2.7 django_registration
 
@@ -51,16 +50,14 @@ Idioma
 El idioma principal del proyecto es el castellano (es_AR, lunfardo), por ahora.
 
 En el proyecto se pueden encontrar dos tipos de textos:
-    1. Aquellos que por practicidad están disponibles en un solo idioma. Se
-       incluyen:
+    1. Aquellos que por practicidad están disponibles en un solo idioma. Se incluyen:
            - nombres de archivos y directorios;
            - identificadores propios (de tablas, vistas, campos, etc.) en la
              base de datos;
            - identificadores propios en el código en Python;
            - comentarios en el código en Python;
            - mensajes de envíos/commits al repositorio.
-    2. Aquellos que por defecto están en un idioma dado pero se les puede
-       agregar traducciones. Se incluyen:
+    2. Aquellos que por defecto están en un idioma dado pero se les puede agregar traducciones. Se incluyen:
            - cadenas de la interfaz de usuario;
            - archivos de documentación;
            - ¿direcciones URL?
@@ -79,8 +76,7 @@ etimológicamente).
 Estilo
 ======
 
-Nuestro estilo para el código en Python se basa en la **Guía de Estilo para
-Código Python**, recogida en el PEP8:
+Nuestro estilo para el código en Python se basa en la **Guía de Estilo para Código Python**, recogida en el PEP8:
     http://www.python.org/dev/peps/pep-0008/
 
 Con algunas salvedades:
@@ -102,7 +98,7 @@ Filosofía
 =========
 
 La idea es que sea simple y sin repetirnos (KISS & DRY). Todo bajo un sistema
-meritocrático.
+democrático, en un futuro quizás sea meritocrático.
 
 
 Colaboradores
