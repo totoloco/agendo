@@ -15,4 +15,3 @@ urlpatterns = patterns('',
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_ROOT}),
     (r'^', include('alumnos.urls')),
 )
-
